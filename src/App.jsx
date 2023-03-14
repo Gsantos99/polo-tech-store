@@ -12,6 +12,10 @@ export default function App() {
         <Card/>
         <Card/>
         <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
      </section>
      <Footer/>
     </div>
