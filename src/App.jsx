@@ -38,7 +38,7 @@ export default function App() {
      <Header color='rgb(248, 0, 50)' titulo='Polo tech Store' />
      <section>
       {
-        produtos.length === 0 ? <Loading type='spin' color='#FF0000'/> : listaDeProdutos 
+        produtos.length === 0 ? <Loading type='spin' color='rgb(248, 0, 50)'/> : listaDeProdutos 
 
       }
      </section>
