@@ -9,21 +9,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* border-radius: 10px; */
+  border-radius: 10px;
 }
 
-.btn-success {
-  position: relative;
-  bottom: 0;
-  background-color: green;
-  height: 50px;
-  color: aliceblue;
-  border-radius: 5px;
-}
-
-.btn-success:hover {
-  cursor: pointer;
-}
 
 .card:hover {
   transform: scale(1.1);

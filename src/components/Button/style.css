@@ -1,0 +1,12 @@
+button {
+  position: relative;
+  bottom: 0;
+  background-color: green;
+  height: 50px;
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
