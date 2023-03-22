@@ -1,14 +1,20 @@
 import React from 'react'
 import Button from '../Button'
 import './style.css'
+import { Link } from 'react-router-dom'
 
-export default function Card({title, price, description, image}) {
+export default function Card({title, price, description, image, id}) {
+   
+  
+  
   return(
     <div className="card">
-      <img alt='Foto do produto' src={image} width='280'/>
+      <img alt='Foto do produto' src={image} />
         <span>{title}</span><span>R$ {price} </span>
         <p>{description}</p>
-        <Button title='Adicionar ao carrinho' estado='sucess'/>
+        <Link to={`/details/${id}`}>
+        <Button title='Ir para produto'  classe='info'/> 
+        </Link>
         </div>
   )
 }

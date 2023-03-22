@@ -3,8 +3,10 @@ import Header from './components/Header';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
-import {api} from '../src/services/api'
 import Loading from '../src/components/Loading'
+import { getProdutos } from './services/getProdutos';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 
 
@@ -12,26 +14,16 @@ export default function App() {
   
   const [produtos, setProdutos] = useState([])
 
-   async function getProdutos() {
-    try {
-      const { data } = await api.get("/products")
-      setProdutos(data)
-    } catch (e) {
-      console.log(e)
-    }
-  }
-
-   const listaDeProdutos = produtos.map((produto) => {
+  useEffect(()=>{
+   getProdutos().then(dados => setProdutos(dados))
+   },[]) 
+  
+  const listaDeProdutos = produtos.map((produto) => {
      return(
-       <Card key={produto.id} image={produto.category.image} {...produto} />
+       <Card key={produto.id} image={produto.images[0]} {...produto} />
      )
    })
   
-
-   useEffect(()=>{
-    getProdutos()
-   },[])
-
   
   return (
     <div className="App">
