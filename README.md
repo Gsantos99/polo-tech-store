@@ -4,7 +4,7 @@ Imagem
 
 ## Sobre o projeto
 
-Descrição do projeto + link do vído do projeto
+Descrição do projeto + link do vídeo do projeto
 
 ### Programa Polo Tech 
 
