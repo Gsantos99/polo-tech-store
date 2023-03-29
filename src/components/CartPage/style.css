@@ -1,0 +1,14 @@
+section.cart-container {
+  /* background-color: red; */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+
+
+section.price {
+  background-color: blue;
+}
+

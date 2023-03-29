@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Loading from '../src/components/Loading'
 import { getProdutos } from './services/getProdutos';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ProductItem from './components/ProductItem';
 
 
 
@@ -27,12 +28,15 @@ export default function App() {
   
   return (
     <div className="App">
-     <Header color='rgb(248, 0, 50)' titulo='Polo tech Store' />
+          <Header  color='rgb(248, 0, 50)' title='Polo tech Store'/>
      <section>
+      
       {
         produtos.length === 0 ? <Loading type='spin' color='rgb(248, 0, 50)'/> : listaDeProdutos 
 
       }
+
+
      </section>
      <Footer/>
     </div>

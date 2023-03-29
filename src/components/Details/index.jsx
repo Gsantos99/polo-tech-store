@@ -5,6 +5,11 @@ import { useLoaderData } from 'react-router-dom'
 import { getProduto } from '../../services/getProduto';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
+import { listaDeProdutos } from '../../contexts/cart-context'; 
+import { useContext } from 'react';
+import { CartProvider } from '../../contexts/cart-context';
+import  Header  from '../Header'
+
 
 
 
@@ -12,21 +17,29 @@ import { Carousel } from 'react-responsive-carousel';
 export async function loader({params}){
   
   const  produto = await getProduto(params.productId)
-  
-  
-console.log(produto)
-
   return {produto}
 }
 
 export default function Details({params}) {
 
   const { produto } =  useLoaderData()
+
+  const {cartProdutos, setCartProdutos, handleSalveItens} = useContext(listaDeProdutos)
   
-  console.log(produto.images)
   
-  return(
+//  Adicionar ao carrinho 
+  function handleClick(){
     
+    console.log(cartProdutos)
+     
+     handleSalveItens(produto)
+     setCartProdutos(cartProdutos)
+  }
+
+  
+  return(<>
+   
+   
     <div className="details">
      
       <Carousel>
@@ -42,10 +55,15 @@ export default function Details({params}) {
             </Carousel>
         <span>{produto.title}</span><span>R$ {produto.price} </span>
         <p>{produto.description}</p>
-        <Button title='Adicionar ao carrinho'/>
+         
+         <Link to={'/cart'}>
+        <Button title='Adicionar ao carrinho' cor='blue' onClick={handleClick}/>
+         </Link>
+      
         <Link  to={`/`}>
         <Button title='Voltar'/>
         </Link>
         </div>
-  )
+
+ </> )
 }
