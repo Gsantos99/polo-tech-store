@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import { listaDeProdutos } from '../../contexts/cart-context'; 
 import { useContext } from 'react';
-import { CartProvider } from '../../contexts/cart-context';
-import  Header  from '../Header'
+
+
 
 
 
@@ -56,9 +56,9 @@ export default function Details({params}) {
         <span>{produto.title}</span><span>R$ {produto.price} </span>
         <p>{produto.description}</p>
          
-         <Link to={'/cart'}>
+         {/* <Link to={'/cart'}> */}
         <Button title='Adicionar ao carrinho' cor='blue' onClick={handleClick}/>
-         </Link>
+         {/* </Link> */}
       
         <Link  to={`/`}>
         <Button title='Voltar'/>
