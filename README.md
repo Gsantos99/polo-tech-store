@@ -4,11 +4,11 @@
 
 ## Sobre o projeto
 
-Descrição do projeto + link do vídeo do projeto
+Um e-commerce feito com React que consome uma Api e renderiza os produtos de maneira dinâmica na tela. 
 
 ### Programa Polo Tech 
 
-Descrição do Polo Tech 
+Programa de formação em programação das Lojas Americanas em parceria com a Ada Tech e Google Cloud.
 
 ## Tecnologias utilizadas 
 
